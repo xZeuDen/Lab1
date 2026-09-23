@@ -1,6 +1,9 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+import android.view.TextureView;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +23,12 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    int counter = 0;
+    public void buttonCounter(View view) {
+            counter ++;
+        TextView counterText = findViewById(R.id.counterText);
+        counterText.setText("You have clicked the button" + counter + " times!");
     }
 }
